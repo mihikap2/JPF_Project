@@ -1,0 +1,13 @@
+We start by initializing all threads,
+Then we read the first byte into the main download thread, and wait to acquire the output
+lock in line 211
+
+Now we read and write everything in the second download thread.
+After reading and writing with the second download thread we decrease the number of 
+downloaders to 0 (line 151) and wait for access to the output lock in line 153.
+
+The main download thread now acquires the output lock (line 211), the number of downloaders is now 0,
+and since the firstChunkOk flag is set to true we return without writing the byte we had read earlier.
+Next we continue in the download function, still holding onto the lock we close the output connection and call the oracle.
+
+The oracle fails since we returned from the main download thread without writing to the output file.
