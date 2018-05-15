@@ -1,0 +1,12 @@
+1. Explain why your solution is likely correct. Are workers added and executed thread-safe way? Is the access to the shared output file always safe (no attempt to write to a closed file; possible exceptions handled)?
+
+Since we are synchronysing all reads and writes to the downloaders variable in the downloader class,
+we are guaranteeing that we do not close the socket, printwriter and inputStream until all data has been read from the server (Lines 222-224 in Downloader).
+Another thing that is guaranteed is that we do not close the output stream until all data has been written to the output file (lines 150 - 162).
+Since we are not closing the output file unless all downloaders have finished writing to it we are never writing to a closed output file.
+
+Regarding workers in the webServer module, the worker function run is synchronized so every read/write a worker makes is threadsafe, only one worker can operate at a time so all operations made by workers should be threadsafe.
+
+----------------------------------------------------------------------------------------------------
+
+2. What can you say about the resulting system after it has been verified with JPF? Is it proven to be correct? Why (not)?

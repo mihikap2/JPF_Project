@@ -148,8 +148,8 @@ public class Downloader extends Thread {
 			downloaders--;
 		}
 		synchronized (output) {
-		if (downloaders == 0) { // workers finished
-			System.out.println("Workers finished.");
+			if (downloaders == 0) { // workers finished
+				System.out.println("Workers finished.");
 
 				if (firstChunkOK && !main_finished) {
 					try {

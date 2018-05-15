@@ -1,8 +1,0 @@
-Initialize connection between webserver and downloader 1
-Downloader 1 reads from server and writes to file
-Initialize connection between webserver and downloader 2
-Downloader 2 reads from server and writes to file
-Downloader 2 closes connection to web server and tries to decrement the number of downloaders
-At the same time downloader 1 is still reading and writing from web server
-Downloader 1 tries to read the number of active downloaders at the same time as Downloader 2 is decrementing the number of downloaders
-this causes a race condition
