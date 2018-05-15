@@ -11,4 +11,5 @@ Regarding workers in the webServer module, the worker function run is synchroniz
 
 2. What can you say about the resulting system after it has been verified with JPF? Is it proven to be correct? Why (not)?
 
-No, the JPF checker is checking for race conditions but it is not, for example, checking the output file for correctness. More checks need to be added to be able to confirm that the system is working as intended.
+No, the JPF checker is guaranteeing that there are no race conditions but it is not, for example, the output file is correct. More checks need to be added to be able to confirm that the system is working as intended.
+There are exceptions in the code which are being caught and a stack trace printed, but there are no assertions in the exceptions so the checker might let some exceptions pass when it should be failing.
