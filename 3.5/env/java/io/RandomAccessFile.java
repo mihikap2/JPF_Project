@@ -29,9 +29,9 @@ public class RandomAccessFile {
 	}
 
 	public void oracle() throws IOException {
-		assert(data[0] == "a".getBytes("UTF-8")[0]);
-		assert(data[1] == "b".getBytes("UTF-8")[0]);
-		assert(data[2] == "c".getBytes("UTF-8")[0]);
+		assert(data[0] == (byte)'a');
+		assert(data[1] == (byte)'b');
+		assert(data[2] == (byte)'c');
 	}
 	
 	public int read(byte[] b, int off, int len) throws IOException {

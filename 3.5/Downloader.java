@@ -75,7 +75,7 @@ public class Downloader extends Thread {
 		try {
 			synchronized (output) {
 				output.close();
-			//	oracle.oracle();
+				oracle.oracle();
 			}
 		} catch (IOException e) {
 			die("Error closing file", e);
@@ -161,7 +161,7 @@ public class Downloader extends Thread {
 				if (firstChunkOK && !main_finished) {
 					try {
 						output.close();
-					//	oracle.oracle();
+						oracle.oracle();
 					} catch (IOException e) {
 						die("Error closing file", e);
 					}
