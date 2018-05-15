@@ -10,3 +10,5 @@ Regarding workers in the webServer module, the worker function run is synchroniz
 ----------------------------------------------------------------------------------------------------
 
 2. What can you say about the resulting system after it has been verified with JPF? Is it proven to be correct? Why (not)?
+
+No, the JPF checker is checking for race conditions but it is not, for example, checking the output file for correctness. More checks need to be added to be able to confirm that the system is working as intended.
