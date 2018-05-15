@@ -5,4 +5,4 @@ Next the second download thread runs, reads all the data it needs and decrements
 
 The main download thread now acquires the lock, sets the main_finished flag and closes the connection a second time (line 71).
 
-The main thread always closes the connection but the second download thread only closes it if it finishes before the main thread, this results in the output connection being closed multiple times.
+The main thread always closes the connection but the second download thread only closes it if it finishes before the main thread, this results in the output connection potentially being closed multiple times.
