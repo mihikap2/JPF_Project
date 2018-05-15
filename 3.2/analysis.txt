@@ -1,0 +1,8 @@
+We initialize the web server as we did before,
+Then the main download thread reads in all the data it needs and stops right before setting the main_finished flag(line 118). The main_finished flag is not set and the main download thread did not acquire the lock to set it.
+
+Next the second download thread runs, reads all the data it needs and decrements the number of downloaders (line 148) to 0. At this point the main_finished flag has not been set, so the second download thread keeps running while holding the output lock, sees that the main_finished flag has not been set and closes the output connection (lines 154 to 156). Now the output file connection has been closed.
+
+The main download thread now acquires the lock, sets the main_finished flag and closes the connection a second time (line 71).
+
+The main thread always closes the connection but the second download thread only closes it if it finishes before the main thread, this results in the output connection being closed multiple times.

@@ -20,6 +20,7 @@ public class RandomAccessFile {
 	}
 
 	public void close() throws IOException {
+		assert(!isClosed);
 		isClosed = true;
 	}
 
