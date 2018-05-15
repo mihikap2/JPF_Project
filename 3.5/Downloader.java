@@ -1,7 +1,11 @@
-import env.java.net.*;
-import env.java.io.*;
+import java.net.*;
+import java.io.*;
 import java.util.*;
 import env.java.io.RandomAccessFile;
+import env.java.io.InputStream;
+import env.java.io.OutputStream;
+import env.java.io.PrintWriter;
+import env.java.net.Socket;
 
 public class Downloader extends Thread {
 	final static int STATE_OK = -2;
@@ -71,7 +75,7 @@ public class Downloader extends Thread {
 		try {
 			synchronized (output) {
 				output.close();
-				oracle.oracle();
+			//	oracle.oracle();
 			}
 		} catch (IOException e) {
 			die("Error closing file", e);
@@ -157,7 +161,7 @@ public class Downloader extends Thread {
 				if (firstChunkOK && !main_finished) {
 					try {
 						output.close();
-						oracle.oracle();
+					//	oracle.oracle();
 					} catch (IOException e) {
 						die("Error closing file", e);
 					}
