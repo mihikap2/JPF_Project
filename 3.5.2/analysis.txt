@@ -1,0 +1,4 @@
+The main downloader initialises a worker which reads all the content,
+then the main downloader tries to read the content again, this time an error triggers
+(an assertion error in our case but an IOException would probably more suitable in a real application)
+This error is not handled by the program and triggers the error trace.
