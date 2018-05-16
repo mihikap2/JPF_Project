@@ -31,32 +31,8 @@ public class InputStream {
 		}
 		for (int i = 0; i < len; i++)
 			b[i] = (byte) ('a' + (start + i));
-		start += len;
-		System.out.println("THE DATA BUFFER" + b);
+		// start += len;
 		return 0;
-		/*
-		if (len > CONTENT_LENGTH) {
-			len = CONTENT_LENGTH;
-		}
-		if (off < 0) {
-			off = 0;
-		}
-		for (int i = 0; i < len; i++) {
-			try {
-			if (start == 0) {
-				b[i + off] = "a".getBytes("UTF-8")[0];
-			} else if (start == 1) {
-				b[i + off] = "b".getBytes("UTF-8")[0];
-			} else if (start == 2) {
-				b[i + off] = "c".getBytes("UTF-8")[0];
-			}
-			start++;
-			} catch(UnsupportedEncodingException e) {
-				e.printStackTrace();
-			}
-		}
-		return 0;
-		*/
 	}
 
 	/** TODO: Implement the read operation for the HTTP header.
