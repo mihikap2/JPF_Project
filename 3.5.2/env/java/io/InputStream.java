@@ -26,9 +26,13 @@ public class InputStream {
 	  * This means the same data has to be returned as in sendFile in
 	  * the web server. */
 	public int read(byte[] b, int off, int len) {
+		if (gov.nasa.jpf.vm.Verify.getBoolean()) {
+			assert(false);
+		}
 		if (start >= CONTENT_LENGTH) {
 			return -1;
 		}
+		
 		for (int i = 0; i < len; i++)
 			b[i] = (byte) ('a' + (start + i));
 		return 0;

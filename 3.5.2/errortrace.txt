@@ -1,0 +1,1391 @@
+JavaPathfinder core system v8.0 - (C) 2005-2014 United States Government. All rights reserved.
+
+
+====================================================== system under test
+jdl.main("http://localhost/test")
+
+====================================================== search started: 5/16/18 12:22 PM
+
+====================================================== error 1
+gov.nasa.jpf.vm.NoUncaughtExceptionsProperty
+java.lang.AssertionError
+	at env.java.io.InputStream.read(InputStream.java:30)
+	at Downloader.getData(Downloader.java:212)
+	at Downloader.getData(Downloader.java:124)
+	at Downloader.download(Downloader.java:74)
+	at jdl.main(jdl.java:5)
+
+
+====================================================== trace #1
+------------------------------------------------------ transition #0 thread: 0
+gov.nasa.jpf.vm.choice.ThreadChoiceFromSet {id:"ROOT" ,1/1,isCascaded:false,attrs:[gov.nasa.jpf.vm.GlobalSchedulingPoint@7ce6a65d]}
+      [3157 insn w/o sources]
+  jdl.java:3                     : Downloader dl = Downloader.getMain();
+      [1 insn w/o sources]
+  Downloader.java:10             : public class Downloader extends Thread {
+      [2 insn w/o sources]
+  Downloader.java:10             : public class Downloader extends Thread {
+  Downloader.java:14             : static Downloader main = new Downloader();
+  Downloader.java:37             : private Downloader() {
+      [145 insn w/o sources]
+  Downloader.java:21             : int port = 8080;
+  Downloader.java:22             : boolean ok = false;
+  Downloader.java:23             : int start = 0;
+  Downloader.java:24             : int end = Integer.MAX_VALUE;
+  Downloader.java:25             : Socket s = null;
+  Downloader.java:26             : PrintWriter pw = null;
+  Downloader.java:27             : InputStream is = null;
+  Downloader.java:38             : }
+  Downloader.java:14             : static Downloader main = new Downloader();
+  Downloader.java:28             : static boolean main_finished = false;
+  Downloader.java:29             : static boolean firstChunkOK = false;
+  Downloader.java:30             : static int firstWorkerStart = Integer.MAX_VALUE;
+  Downloader.java:31             : static int downloaders = DL_THREADS;
+  Downloader.java:1              : import java.net.*;
+  jdl.java:3                     : Downloader dl = Downloader.getMain();
+  Downloader.java:34             : return main;
+  jdl.java:3                     : Downloader dl = Downloader.getMain();
+  jdl.java:4                     : dl.configure(/*args[0]*/"http://" + java.net.InetAddress.getLocalHost().getHostName() + "/test");
+      [2 insn w/o sources]
+  jdl.java:4                     : dl.configure(/*args[0]*/"http://" + java.net.InetAddress.getLocalHost().getHostName() + "/test");
+      [2 insn w/o sources]
+  jdl.java:4                     : dl.configure(/*args[0]*/"http://" + java.net.InetAddress.getLocalHost().getHostName() + "/test");
+      [13 insn w/o sources]
+  jdl.java:4                     : dl.configure(/*args[0]*/"http://" + java.net.InetAddress.getLocalHost().getHostName() + "/test");
+      [3 insn w/o sources]
+  jdl.java:4                     : dl.configure(/*args[0]*/"http://" + java.net.InetAddress.getLocalHost().getHostName() + "/test");
+      [2 insn w/o sources]
+  jdl.java:4                     : dl.configure(/*args[0]*/"http://" + java.net.InetAddress.getLocalHost().getHostName() + "/test");
+      [2 insn w/o sources]
+  jdl.java:4                     : dl.configure(/*args[0]*/"http://" + java.net.InetAddress.getLocalHost().getHostName() + "/test");
+      [2 insn w/o sources]
+  jdl.java:4                     : dl.configure(/*args[0]*/"http://" + java.net.InetAddress.getLocalHost().getHostName() + "/test");
+  Downloader.java:49             : url = new URL(url_str);
+      [699 insn w/o sources]
+  Downloader.java:49             : url = new URL(url_str);
+      [1722 insn w/o sources]
+  Downloader.java:49             : url = new URL(url_str);
+  Downloader.java:52             : }
+  Downloader.java:53             : filename = url.getFile();
+      [3 insn w/o sources]
+  Downloader.java:53             : filename = url.getFile();
+  Downloader.java:54             : if (filename.equals("")) {
+      [2 insn w/o sources]
+  Downloader.java:54             : if (filename.equals("")) {
+  Downloader.java:58             : outputFileName = URLDecoder.decode(filename, "UTF-8").substring(filename.indexOf("/") + 1);
+      [5939 insn w/o sources]
+  Downloader.java:58             : outputFileName = URLDecoder.decode(filename, "UTF-8").substring(filename.indexOf("/") + 1);
+      [2 insn w/o sources]
+  Downloader.java:58             : outputFileName = URLDecoder.decode(filename, "UTF-8").substring(filename.indexOf("/") + 1);
+      [2 insn w/o sources]
+  Downloader.java:58             : outputFileName = URLDecoder.decode(filename, "UTF-8").substring(filename.indexOf("/") + 1);
+      [2 insn w/o sources]
+  Downloader.java:58             : outputFileName = URLDecoder.decode(filename, "UTF-8").substring(filename.indexOf("/") + 1);
+  Downloader.java:59             : output = new RandomAccessFile(new File(outputFileName), "rw");
+      [1 insn w/o sources]
+  env/java/io/RandomAccessFile.java:7 : public class RandomAccessFile {
+      [2 insn w/o sources]
+  env/java/io/RandomAccessFile.java:7 : public class RandomAccessFile {
+  env/java/io/RandomAccessFile.java:11 : private static int size = 0;
+  env/java/io/RandomAccessFile.java:13 : private static byte[] data = new byte[MAX_SIZE];
+  env/java/io/RandomAccessFile.java:1 : package env.java.io;
+  Downloader.java:59             : output = new RandomAccessFile(new File(outputFileName), "rw");
+      [129 insn w/o sources]
+  Downloader.java:59             : output = new RandomAccessFile(new File(outputFileName), "rw");
+      [9 insn w/o sources]
+  Downloader.java:59             : output = new RandomAccessFile(new File(outputFileName), "rw");
+  env/java/io/RandomAccessFile.java:15 : public RandomAccessFile(File file, String mode) throws FileNotFoundException {
+      [1 insn w/o sources]
+  env/java/io/RandomAccessFile.java:9 : private boolean canWrite = false;
+  env/java/io/RandomAccessFile.java:10 : private boolean isClosed = false;
+  env/java/io/RandomAccessFile.java:12 : private int pos = 0;
+  env/java/io/RandomAccessFile.java:17 : if (mode.indexOf('w') != -1) {
+      [2 insn w/o sources]
+  env/java/io/RandomAccessFile.java:17 : if (mode.indexOf('w') != -1) {
+  env/java/io/RandomAccessFile.java:18 : canWrite = true;
+  env/java/io/RandomAccessFile.java:20 : }
+  Downloader.java:59             : output = new RandomAccessFile(new File(outputFileName), "rw");
+  Downloader.java:60             : oracle = new RandomAccessFile(new File(outputFileName), "r");
+      [9 insn w/o sources]
+  Downloader.java:60             : oracle = new RandomAccessFile(new File(outputFileName), "r");
+  env/java/io/RandomAccessFile.java:15 : public RandomAccessFile(File file, String mode) throws FileNotFoundException {
+      [1 insn w/o sources]
+  env/java/io/RandomAccessFile.java:9 : private boolean canWrite = false;
+  env/java/io/RandomAccessFile.java:10 : private boolean isClosed = false;
+  env/java/io/RandomAccessFile.java:12 : private int pos = 0;
+  env/java/io/RandomAccessFile.java:17 : if (mode.indexOf('w') != -1) {
+      [2 insn w/o sources]
+  env/java/io/RandomAccessFile.java:17 : if (mode.indexOf('w') != -1) {
+  env/java/io/RandomAccessFile.java:20 : }
+  Downloader.java:60             : oracle = new RandomAccessFile(new File(outputFileName), "r");
+  Downloader.java:63             : }
+  Downloader.java:64             : }
+  jdl.java:5                     : dl.download();
+  Downloader.java:72             : int length = connect();
+  Downloader.java:86             : int length = 0;
+  Downloader.java:88             : s = new Socket(url.getHost(), port);
+      [3 insn w/o sources]
+  Downloader.java:88             : s = new Socket(url.getHost(), port);
+  env/java/net/Socket.java:16    : this();
+  env/java/net/Socket.java:10    : public Socket() {
+      [1 insn w/o sources]
+  env/java/net/Socket.java:11    : istr = new InputStream();
+      [1 insn w/o sources]
+  env/java/io/InputStream.java:5 : public class InputStream {
+      [2 insn w/o sources]
+  env/java/io/InputStream.java:5 : public class InputStream {
+  env/java/io/InputStream.java:1 : package env.java.io;
+  env/java/net/Socket.java:11    : istr = new InputStream();
+  env/java/io/InputStream.java:17 : public InputStream() {
+      [1 insn w/o sources]
+  env/java/io/InputStream.java:18 : pos = 0;
+  env/java/io/InputStream.java:19 : start = 0;
+  env/java/io/InputStream.java:20 : }
+  env/java/net/Socket.java:11    : istr = new InputStream();
+  env/java/net/Socket.java:12    : ostr = new OutputStream(istr);
+  env/java/io/OutputStream.java:6 : public OutputStream(InputStream input) {
+      [1 insn w/o sources]
+  env/java/io/OutputStream.java:7 : in = input;
+  env/java/io/OutputStream.java:8 : }
+  env/java/net/Socket.java:12    : ostr = new OutputStream(istr);
+  env/java/net/Socket.java:13    : }
+  env/java/net/Socket.java:17    : connect();
+  env/java/net/Socket.java:22    : }
+  Downloader.java:88             : s = new Socket(url.getHost(), port);
+  Downloader.java:89             : pw = new PrintWriter(s.getOutputStream(), true);
+      [1 insn w/o sources]
+  env/java/io/PrintWriter.java:3 : public class PrintWriter {
+      [2 insn w/o sources]
+  env/java/io/PrintWriter.java:3 : public class PrintWriter {
+  env/java/io/PrintWriter.java:1 : package env.java.io;
+  Downloader.java:89             : pw = new PrintWriter(s.getOutputStream(), true);
+  env/java/net/Socket.java:28    : return ostr;
+  Downloader.java:89             : pw = new PrintWriter(s.getOutputStream(), true);
+  env/java/io/PrintWriter.java:7 : public PrintWriter(OutputStream out, boolean autoflush) {
+      [1 insn w/o sources]
+  env/java/io/PrintWriter.java:8 : this.out = out;
+  env/java/io/PrintWriter.java:9 : }
+  Downloader.java:89             : pw = new PrintWriter(s.getOutputStream(), true);
+  Downloader.java:90             : is = s.getInputStream();
+  env/java/net/Socket.java:32    : return istr;
+  Downloader.java:90             : is = s.getInputStream();
+  Downloader.java:93             : }
+  Downloader.java:96             : pw.println("Range: bytes=" + start + "-" + end);
+      [2 insn w/o sources]
+  Downloader.java:96             : pw.println("Range: bytes=" + start + "-" + end);
+      [2 insn w/o sources]
+  Downloader.java:96             : pw.println("Range: bytes=" + start + "-" + end);
+      [2 insn w/o sources]
+  Downloader.java:96             : pw.println("Range: bytes=" + start + "-" + end);
+      [2 insn w/o sources]
+  Downloader.java:96             : pw.println("Range: bytes=" + start + "-" + end);
+      [2 insn w/o sources]
+  Downloader.java:96             : pw.println("Range: bytes=" + start + "-" + end);
+      [2 insn w/o sources]
+  Downloader.java:96             : pw.println("Range: bytes=" + start + "-" + end);
+  env/java/io/PrintWriter.java:12 : assert (line.startsWith("Range: bytes"));
+      [2 insn w/o sources]
+  env/java/io/PrintWriter.java:12 : assert (line.startsWith("Range: bytes"));
+  env/java/io/PrintWriter.java:13 : int eq = line.indexOf('=');
+      [2 insn w/o sources]
+  env/java/io/PrintWriter.java:13 : int eq = line.indexOf('=');
+  env/java/io/PrintWriter.java:14 : int idx = line.indexOf('-');
+      [2 insn w/o sources]
+  env/java/io/PrintWriter.java:14 : int idx = line.indexOf('-');
+  env/java/io/PrintWriter.java:15 : String rangeStart = line.substring(eq + 1, idx);
+      [2 insn w/o sources]
+  env/java/io/PrintWriter.java:15 : String rangeStart = line.substring(eq + 1, idx);
+  env/java/io/PrintWriter.java:17 : int start = Integer.parseInt(rangeStart);
+      [2 insn w/o sources]
+  env/java/io/PrintWriter.java:17 : int start = Integer.parseInt(rangeStart);
+  env/java/io/PrintWriter.java:19 : out.in.start = start;
+  env/java/io/PrintWriter.java:21 : }
+  Downloader.java:101            : String line = null;
+  Downloader.java:103            : line = readLine(is);
+  Downloader.java:174            : StringBuilder s = new StringBuilder();
+      [2 insn w/o sources]
+  Downloader.java:174            : StringBuilder s = new StringBuilder();
+  Downloader.java:175            : char ch = '\0';
+  Downloader.java:177            : while(ch != '\n') {
+  Downloader.java:178            : int r = is.read();
+  env/java/io/InputStream.java:45 : if (pos < HEADER.length()) {
+      [4 insn w/o sources]
+  env/java/io/InputStream.java:45 : if (pos < HEADER.length()) {
+  env/java/io/InputStream.java:46 : return (int)HEADER.charAt(pos++);
+      [2 insn w/o sources]
+  env/java/io/InputStream.java:46 : return (int)HEADER.charAt(pos++);
+  Downloader.java:178            : int r = is.read();
+  Downloader.java:179            : if (r == -1) {
+  Downloader.java:182            : ch = (char) r;
+  Downloader.java:183            : if (ch == '\r') {
+  Downloader.java:185            : } else if (ch != '\n') {
+  Downloader.java:186            : s.append(ch);
+      [2 insn w/o sources]
+  Downloader.java:186            : s.append(ch);
+  Downloader.java:188            : }
+  Downloader.java:177            : while(ch != '\n') {
+  Downloader.java:178            : int r = is.read();
+  env/java/io/InputStream.java:45 : if (pos < HEADER.length()) {
+      [4 insn w/o sources]
+  env/java/io/InputStream.java:45 : if (pos < HEADER.length()) {
+  env/java/io/InputStream.java:46 : return (int)HEADER.charAt(pos++);
+      [2 insn w/o sources]
+  env/java/io/InputStream.java:46 : return (int)HEADER.charAt(pos++);
+  Downloader.java:178            : int r = is.read();
+  Downloader.java:179            : if (r == -1) {
+  Downloader.java:182            : ch = (char) r;
+  Downloader.java:183            : if (ch == '\r') {
+  Downloader.java:185            : } else if (ch != '\n') {
+  Downloader.java:186            : s.append(ch);
+      [2 insn w/o sources]
+  Downloader.java:186            : s.append(ch);
+  Downloader.java:188            : }
+  Downloader.java:177            : while(ch != '\n') {
+  Downloader.java:178            : int r = is.read();
+  env/java/io/InputStream.java:45 : if (pos < HEADER.length()) {
+      [4 insn w/o sources]
+  env/java/io/InputStream.java:45 : if (pos < HEADER.length()) {
+  env/java/io/InputStream.java:46 : return (int)HEADER.charAt(pos++);
+      [2 insn w/o sources]
+  env/java/io/InputStream.java:46 : return (int)HEADER.charAt(pos++);
+  Downloader.java:178            : int r = is.read();
+  Downloader.java:179            : if (r == -1) {
+  Downloader.java:182            : ch = (char) r;
+  Downloader.java:183            : if (ch == '\r') {
+  Downloader.java:185            : } else if (ch != '\n') {
+  Downloader.java:186            : s.append(ch);
+      [2 insn w/o sources]
+  Downloader.java:186            : s.append(ch);
+  Downloader.java:188            : }
+  Downloader.java:177            : while(ch != '\n') {
+  Downloader.java:178            : int r = is.read();
+  env/java/io/InputStream.java:45 : if (pos < HEADER.length()) {
+      [4 insn w/o sources]
+  env/java/io/InputStream.java:45 : if (pos < HEADER.length()) {
+  env/java/io/InputStream.java:46 : return (int)HEADER.charAt(pos++);
+      [2 insn w/o sources]
+  env/java/io/InputStream.java:46 : return (int)HEADER.charAt(pos++);
+  Downloader.java:178            : int r = is.read();
+  Downloader.java:179            : if (r == -1) {
+  Downloader.java:182            : ch = (char) r;
+  Downloader.java:183            : if (ch == '\r') {
+  Downloader.java:185            : } else if (ch != '\n') {
+  Downloader.java:186            : s.append(ch);
+      [2 insn w/o sources]
+  Downloader.java:186            : s.append(ch);
+  Downloader.java:188            : }
+  Downloader.java:177            : while(ch != '\n') {
+  Downloader.java:178            : int r = is.read();
+  env/java/io/InputStream.java:45 : if (pos < HEADER.length()) {
+      [4 insn w/o sources]
+  env/java/io/InputStream.java:45 : if (pos < HEADER.length()) {
+  env/java/io/InputStream.java:46 : return (int)HEADER.charAt(pos++);
+      [2 insn w/o sources]
+  env/java/io/InputStream.java:46 : return (int)HEADER.charAt(pos++);
+  Downloader.java:178            : int r = is.read();
+  Downloader.java:179            : if (r == -1) {
+  Downloader.java:182            : ch = (char) r;
+  Downloader.java:183            : if (ch == '\r') {
+  Downloader.java:185            : } else if (ch != '\n') {
+  Downloader.java:186            : s.append(ch);
+      [2 insn w/o sources]
+  Downloader.java:186            : s.append(ch);
+  Downloader.java:188            : }
+  Downloader.java:177            : while(ch != '\n') {
+  Downloader.java:178            : int r = is.read();
+  env/java/io/InputStream.java:45 : if (pos < HEADER.length()) {
+      [4 insn w/o sources]
+  env/java/io/InputStream.java:45 : if (pos < HEADER.length()) {
+  env/java/io/InputStream.java:46 : return (int)HEADER.charAt(pos++);
+      [2 insn w/o sources]
+  env/java/io/InputStream.java:46 : return (int)HEADER.charAt(pos++);
+  Downloader.java:178            : int r = is.read();
+  Downloader.java:179            : if (r == -1) {
+  Downloader.java:182            : ch = (char) r;
+  Downloader.java:183            : if (ch == '\r') {
+  Downloader.java:185            : } else if (ch != '\n') {
+  Downloader.java:186            : s.append(ch);
+      [2 insn w/o sources]
+  Downloader.java:186            : s.append(ch);
+  Downloader.java:188            : }
+  Downloader.java:177            : while(ch != '\n') {
+  Downloader.java:178            : int r = is.read();
+  env/java/io/InputStream.java:45 : if (pos < HEADER.length()) {
+      [4 insn w/o sources]
+  env/java/io/InputStream.java:45 : if (pos < HEADER.length()) {
+  env/java/io/InputStream.java:46 : return (int)HEADER.charAt(pos++);
+      [2 insn w/o sources]
+  env/java/io/InputStream.java:46 : return (int)HEADER.charAt(pos++);
+  Downloader.java:178            : int r = is.read();
+  Downloader.java:179            : if (r == -1) {
+  Downloader.java:182            : ch = (char) r;
+  Downloader.java:183            : if (ch == '\r') {
+  Downloader.java:185            : } else if (ch != '\n') {
+  Downloader.java:186            : s.append(ch);
+      [2 insn w/o sources]
+  Downloader.java:186            : s.append(ch);
+  Downloader.java:188            : }
+  Downloader.java:177            : while(ch != '\n') {
+  Downloader.java:178            : int r = is.read();
+  env/java/io/InputStream.java:45 : if (pos < HEADER.length()) {
+      [4 insn w/o sources]
+  env/java/io/InputStream.java:45 : if (pos < HEADER.length()) {
+  env/java/io/InputStream.java:46 : return (int)HEADER.charAt(pos++);
+      [2 insn w/o sources]
+  env/java/io/InputStream.java:46 : return (int)HEADER.charAt(pos++);
+  Downloader.java:178            : int r = is.read();
+  Downloader.java:179            : if (r == -1) {
+  Downloader.java:182            : ch = (char) r;
+  Downloader.java:183            : if (ch == '\r') {
+  Downloader.java:185            : } else if (ch != '\n') {
+  Downloader.java:186            : s.append(ch);
+      [2 insn w/o sources]
+  Downloader.java:186            : s.append(ch);
+  Downloader.java:188            : }
+  Downloader.java:177            : while(ch != '\n') {
+  Downloader.java:178            : int r = is.read();
+  env/java/io/InputStream.java:45 : if (pos < HEADER.length()) {
+      [4 insn w/o sources]
+  env/java/io/InputStream.java:45 : if (pos < HEADER.length()) {
+  env/java/io/InputStream.java:46 : return (int)HEADER.charAt(pos++);
+      [2 insn w/o sources]
+  env/java/io/InputStream.java:46 : return (int)HEADER.charAt(pos++);
+  Downloader.java:178            : int r = is.read();
+  Downloader.java:179            : if (r == -1) {
+  Downloader.java:182            : ch = (char) r;
+  Downloader.java:183            : if (ch == '\r') {
+  Downloader.java:185            : } else if (ch != '\n') {
+  Downloader.java:186            : s.append(ch);
+      [2 insn w/o sources]
+  Downloader.java:186            : s.append(ch);
+  Downloader.java:188            : }
+  Downloader.java:177            : while(ch != '\n') {
+  Downloader.java:178            : int r = is.read();
+  env/java/io/InputStream.java:45 : if (pos < HEADER.length()) {
+      [4 insn w/o sources]
+  env/java/io/InputStream.java:45 : if (pos < HEADER.length()) {
+  env/java/io/InputStream.java:46 : return (int)HEADER.charAt(pos++);
+      [2 insn w/o sources]
+  env/java/io/InputStream.java:46 : return (int)HEADER.charAt(pos++);
+  Downloader.java:178            : int r = is.read();
+  Downloader.java:179            : if (r == -1) {
+  Downloader.java:182            : ch = (char) r;
+  Downloader.java:183            : if (ch == '\r') {
+  Downloader.java:185            : } else if (ch != '\n') {
+  Downloader.java:186            : s.append(ch);
+      [2 insn w/o sources]
+  Downloader.java:186            : s.append(ch);
+  Downloader.java:188            : }
+  Downloader.java:177            : while(ch != '\n') {
+  Downloader.java:178            : int r = is.read();
+  env/java/io/InputStream.java:45 : if (pos < HEADER.length()) {
+      [4 insn w/o sources]
+  env/java/io/InputStream.java:45 : if (pos < HEADER.length()) {
+  env/java/io/InputStream.java:46 : return (int)HEADER.charAt(pos++);
+      [2 insn w/o sources]
+  env/java/io/InputStream.java:46 : return (int)HEADER.charAt(pos++);
+  Downloader.java:178            : int r = is.read();
+  Downloader.java:179            : if (r == -1) {
+  Downloader.java:182            : ch = (char) r;
+  Downloader.java:183            : if (ch == '\r') {
+  Downloader.java:185            : } else if (ch != '\n') {
+  Downloader.java:186            : s.append(ch);
+      [2 insn w/o sources]
+  Downloader.java:186            : s.append(ch);
+  Downloader.java:188            : }
+  Downloader.java:177            : while(ch != '\n') {
+  Downloader.java:178            : int r = is.read();
+  env/java/io/InputStream.java:45 : if (pos < HEADER.length()) {
+      [4 insn w/o sources]
+  env/java/io/InputStream.java:45 : if (pos < HEADER.length()) {
+  env/java/io/InputStream.java:46 : return (int)HEADER.charAt(pos++);
+      [2 insn w/o sources]
+  env/java/io/InputStream.java:46 : return (int)HEADER.charAt(pos++);
+  Downloader.java:178            : int r = is.read();
+  Downloader.java:179            : if (r == -1) {
+  Downloader.java:182            : ch = (char) r;
+  Downloader.java:183            : if (ch == '\r') {
+  Downloader.java:185            : } else if (ch != '\n') {
+  Downloader.java:186            : s.append(ch);
+      [2 insn w/o sources]
+  Downloader.java:186            : s.append(ch);
+  Downloader.java:188            : }
+  Downloader.java:177            : while(ch != '\n') {
+  Downloader.java:178            : int r = is.read();
+  env/java/io/InputStream.java:45 : if (pos < HEADER.length()) {
+      [4 insn w/o sources]
+  env/java/io/InputStream.java:45 : if (pos < HEADER.length()) {
+  env/java/io/InputStream.java:46 : return (int)HEADER.charAt(pos++);
+      [2 insn w/o sources]
+  env/java/io/InputStream.java:46 : return (int)HEADER.charAt(pos++);
+  Downloader.java:178            : int r = is.read();
+  Downloader.java:179            : if (r == -1) {
+  Downloader.java:182            : ch = (char) r;
+  Downloader.java:183            : if (ch == '\r') {
+  Downloader.java:185            : } else if (ch != '\n') {
+  Downloader.java:186            : s.append(ch);
+      [2 insn w/o sources]
+  Downloader.java:186            : s.append(ch);
+  Downloader.java:188            : }
+  Downloader.java:177            : while(ch != '\n') {
+  Downloader.java:178            : int r = is.read();
+  env/java/io/InputStream.java:45 : if (pos < HEADER.length()) {
+      [4 insn w/o sources]
+  env/java/io/InputStream.java:45 : if (pos < HEADER.length()) {
+  env/java/io/InputStream.java:46 : return (int)HEADER.charAt(pos++);
+      [2 insn w/o sources]
+  env/java/io/InputStream.java:46 : return (int)HEADER.charAt(pos++);
+  Downloader.java:178            : int r = is.read();
+  Downloader.java:179            : if (r == -1) {
+  Downloader.java:182            : ch = (char) r;
+  Downloader.java:183            : if (ch == '\r') {
+  Downloader.java:185            : } else if (ch != '\n') {
+  Downloader.java:186            : s.append(ch);
+      [2 insn w/o sources]
+  Downloader.java:186            : s.append(ch);
+  Downloader.java:188            : }
+  Downloader.java:177            : while(ch != '\n') {
+  Downloader.java:178            : int r = is.read();
+  env/java/io/InputStream.java:45 : if (pos < HEADER.length()) {
+      [4 insn w/o sources]
+  env/java/io/InputStream.java:45 : if (pos < HEADER.length()) {
+  env/java/io/InputStream.java:46 : return (int)HEADER.charAt(pos++);
+      [2 insn w/o sources]
+  env/java/io/InputStream.java:46 : return (int)HEADER.charAt(pos++);
+  Downloader.java:178            : int r = is.read();
+  Downloader.java:179            : if (r == -1) {
+  Downloader.java:182            : ch = (char) r;
+  Downloader.java:183            : if (ch == '\r') {
+  Downloader.java:185            : } else if (ch != '\n') {
+  Downloader.java:186            : s.append(ch);
+      [2 insn w/o sources]
+  Downloader.java:186            : s.append(ch);
+  Downloader.java:188            : }
+  Downloader.java:177            : while(ch != '\n') {
+  Downloader.java:178            : int r = is.read();
+  env/java/io/InputStream.java:45 : if (pos < HEADER.length()) {
+      [4 insn w/o sources]
+  env/java/io/InputStream.java:45 : if (pos < HEADER.length()) {
+  env/java/io/InputStream.java:46 : return (int)HEADER.charAt(pos++);
+      [2 insn w/o sources]
+  env/java/io/InputStream.java:46 : return (int)HEADER.charAt(pos++);
+  Downloader.java:178            : int r = is.read();
+  Downloader.java:179            : if (r == -1) {
+  Downloader.java:182            : ch = (char) r;
+  Downloader.java:183            : if (ch == '\r') {
+  Downloader.java:185            : } else if (ch != '\n') {
+  Downloader.java:188            : }
+  Downloader.java:177            : while(ch != '\n') {
+  Downloader.java:189            : return s.toString();
+      [2 insn w/o sources]
+  Downloader.java:189            : return s.toString();
+  Downloader.java:103            : line = readLine(is);
+  Downloader.java:106            : }
+  Downloader.java:107            : if (line == null || line.equals("")) {
+      [2 insn w/o sources]
+  Downloader.java:107            : if (line == null || line.equals("")) {
+  Downloader.java:110            : int r = parse(line);
+  Downloader.java:193            : if (line.startsWith("HTTP/1")) {
+      [2 insn w/o sources]
+  Downloader.java:193            : if (line.startsWith("HTTP/1")) {
+  Downloader.java:194            : return STATE_OK;
+  Downloader.java:110            : int r = parse(line);
+  Downloader.java:111            : if (r > 0) {
+  Downloader.java:113            : } else if (r == STATE_OK) {
+  Downloader.java:114            : ok = true;
+  Downloader.java:116            : }
+  Downloader.java:101            : String line = null;
+  Downloader.java:103            : line = readLine(is);
+  Downloader.java:174            : StringBuilder s = new StringBuilder();
+      [2 insn w/o sources]
+  Downloader.java:174            : StringBuilder s = new StringBuilder();
+  Downloader.java:175            : char ch = '\0';
+  Downloader.java:177            : while(ch != '\n') {
+  Downloader.java:178            : int r = is.read();
+  env/java/io/InputStream.java:45 : if (pos < HEADER.length()) {
+      [4 insn w/o sources]
+  env/java/io/InputStream.java:45 : if (pos < HEADER.length()) {
+  env/java/io/InputStream.java:46 : return (int)HEADER.charAt(pos++);
+      [2 insn w/o sources]
+  env/java/io/InputStream.java:46 : return (int)HEADER.charAt(pos++);
+  Downloader.java:178            : int r = is.read();
+  Downloader.java:179            : if (r == -1) {
+  Downloader.java:182            : ch = (char) r;
+  Downloader.java:183            : if (ch == '\r') {
+  Downloader.java:185            : } else if (ch != '\n') {
+  Downloader.java:186            : s.append(ch);
+      [2 insn w/o sources]
+  Downloader.java:186            : s.append(ch);
+  Downloader.java:188            : }
+  Downloader.java:177            : while(ch != '\n') {
+  Downloader.java:178            : int r = is.read();
+  env/java/io/InputStream.java:45 : if (pos < HEADER.length()) {
+      [4 insn w/o sources]
+  env/java/io/InputStream.java:45 : if (pos < HEADER.length()) {
+  env/java/io/InputStream.java:46 : return (int)HEADER.charAt(pos++);
+      [2 insn w/o sources]
+  env/java/io/InputStream.java:46 : return (int)HEADER.charAt(pos++);
+  Downloader.java:178            : int r = is.read();
+  Downloader.java:179            : if (r == -1) {
+  Downloader.java:182            : ch = (char) r;
+  Downloader.java:183            : if (ch == '\r') {
+  Downloader.java:185            : } else if (ch != '\n') {
+  Downloader.java:186            : s.append(ch);
+      [2 insn w/o sources]
+  Downloader.java:186            : s.append(ch);
+  Downloader.java:188            : }
+  Downloader.java:177            : while(ch != '\n') {
+  Downloader.java:178            : int r = is.read();
+  env/java/io/InputStream.java:45 : if (pos < HEADER.length()) {
+      [4 insn w/o sources]
+  env/java/io/InputStream.java:45 : if (pos < HEADER.length()) {
+  env/java/io/InputStream.java:46 : return (int)HEADER.charAt(pos++);
+      [2 insn w/o sources]
+  env/java/io/InputStream.java:46 : return (int)HEADER.charAt(pos++);
+  Downloader.java:178            : int r = is.read();
+  Downloader.java:179            : if (r == -1) {
+  Downloader.java:182            : ch = (char) r;
+  Downloader.java:183            : if (ch == '\r') {
+  Downloader.java:185            : } else if (ch != '\n') {
+  Downloader.java:186            : s.append(ch);
+      [2 insn w/o sources]
+  Downloader.java:186            : s.append(ch);
+  Downloader.java:188            : }
+  Downloader.java:177            : while(ch != '\n') {
+  Downloader.java:178            : int r = is.read();
+  env/java/io/InputStream.java:45 : if (pos < HEADER.length()) {
+      [4 insn w/o sources]
+  env/java/io/InputStream.java:45 : if (pos < HEADER.length()) {
+  env/java/io/InputStream.java:46 : return (int)HEADER.charAt(pos++);
+      [2 insn w/o sources]
+  env/java/io/InputStream.java:46 : return (int)HEADER.charAt(pos++);
+  Downloader.java:178            : int r = is.read();
+  Downloader.java:179            : if (r == -1) {
+  Downloader.java:182            : ch = (char) r;
+  Downloader.java:183            : if (ch == '\r') {
+  Downloader.java:185            : } else if (ch != '\n') {
+  Downloader.java:186            : s.append(ch);
+      [2 insn w/o sources]
+  Downloader.java:186            : s.append(ch);
+  Downloader.java:188            : }
+  Downloader.java:177            : while(ch != '\n') {
+  Downloader.java:178            : int r = is.read();
+  env/java/io/InputStream.java:45 : if (pos < HEADER.length()) {
+      [4 insn w/o sources]
+  env/java/io/InputStream.java:45 : if (pos < HEADER.length()) {
+  env/java/io/InputStream.java:46 : return (int)HEADER.charAt(pos++);
+      [2 insn w/o sources]
+  env/java/io/InputStream.java:46 : return (int)HEADER.charAt(pos++);
+  Downloader.java:178            : int r = is.read();
+  Downloader.java:179            : if (r == -1) {
+  Downloader.java:182            : ch = (char) r;
+  Downloader.java:183            : if (ch == '\r') {
+  Downloader.java:185            : } else if (ch != '\n') {
+  Downloader.java:186            : s.append(ch);
+      [2 insn w/o sources]
+  Downloader.java:186            : s.append(ch);
+  Downloader.java:188            : }
+  Downloader.java:177            : while(ch != '\n') {
+  Downloader.java:178            : int r = is.read();
+  env/java/io/InputStream.java:45 : if (pos < HEADER.length()) {
+      [4 insn w/o sources]
+  env/java/io/InputStream.java:45 : if (pos < HEADER.length()) {
+  env/java/io/InputStream.java:46 : return (int)HEADER.charAt(pos++);
+      [2 insn w/o sources]
+  env/java/io/InputStream.java:46 : return (int)HEADER.charAt(pos++);
+  Downloader.java:178            : int r = is.read();
+  Downloader.java:179            : if (r == -1) {
+  Downloader.java:182            : ch = (char) r;
+  Downloader.java:183            : if (ch == '\r') {
+  Downloader.java:185            : } else if (ch != '\n') {
+  Downloader.java:186            : s.append(ch);
+      [2 insn w/o sources]
+  Downloader.java:186            : s.append(ch);
+  Downloader.java:188            : }
+  Downloader.java:177            : while(ch != '\n') {
+  Downloader.java:178            : int r = is.read();
+  env/java/io/InputStream.java:45 : if (pos < HEADER.length()) {
+      [4 insn w/o sources]
+  env/java/io/InputStream.java:45 : if (pos < HEADER.length()) {
+  env/java/io/InputStream.java:46 : return (int)HEADER.charAt(pos++);
+      [2 insn w/o sources]
+  env/java/io/InputStream.java:46 : return (int)HEADER.charAt(pos++);
+  Downloader.java:178            : int r = is.read();
+  Downloader.java:179            : if (r == -1) {
+  Downloader.java:182            : ch = (char) r;
+  Downloader.java:183            : if (ch == '\r') {
+  Downloader.java:185            : } else if (ch != '\n') {
+  Downloader.java:186            : s.append(ch);
+      [2 insn w/o sources]
+  Downloader.java:186            : s.append(ch);
+  Downloader.java:188            : }
+  Downloader.java:177            : while(ch != '\n') {
+  Downloader.java:178            : int r = is.read();
+  env/java/io/InputStream.java:45 : if (pos < HEADER.length()) {
+      [4 insn w/o sources]
+  env/java/io/InputStream.java:45 : if (pos < HEADER.length()) {
+  env/java/io/InputStream.java:46 : return (int)HEADER.charAt(pos++);
+      [2 insn w/o sources]
+  env/java/io/InputStream.java:46 : return (int)HEADER.charAt(pos++);
+  Downloader.java:178            : int r = is.read();
+  Downloader.java:179            : if (r == -1) {
+  Downloader.java:182            : ch = (char) r;
+  Downloader.java:183            : if (ch == '\r') {
+  Downloader.java:185            : } else if (ch != '\n') {
+  Downloader.java:186            : s.append(ch);
+      [2 insn w/o sources]
+  Downloader.java:186            : s.append(ch);
+  Downloader.java:188            : }
+  Downloader.java:177            : while(ch != '\n') {
+  Downloader.java:178            : int r = is.read();
+  env/java/io/InputStream.java:45 : if (pos < HEADER.length()) {
+      [4 insn w/o sources]
+  env/java/io/InputStream.java:45 : if (pos < HEADER.length()) {
+  env/java/io/InputStream.java:46 : return (int)HEADER.charAt(pos++);
+      [2 insn w/o sources]
+  env/java/io/InputStream.java:46 : return (int)HEADER.charAt(pos++);
+  Downloader.java:178            : int r = is.read();
+  Downloader.java:179            : if (r == -1) {
+  Downloader.java:182            : ch = (char) r;
+  Downloader.java:183            : if (ch == '\r') {
+  Downloader.java:185            : } else if (ch != '\n') {
+  Downloader.java:186            : s.append(ch);
+      [2 insn w/o sources]
+  Downloader.java:186            : s.append(ch);
+  Downloader.java:188            : }
+  Downloader.java:177            : while(ch != '\n') {
+  Downloader.java:178            : int r = is.read();
+  env/java/io/InputStream.java:45 : if (pos < HEADER.length()) {
+      [4 insn w/o sources]
+  env/java/io/InputStream.java:45 : if (pos < HEADER.length()) {
+  env/java/io/InputStream.java:46 : return (int)HEADER.charAt(pos++);
+      [2 insn w/o sources]
+  env/java/io/InputStream.java:46 : return (int)HEADER.charAt(pos++);
+  Downloader.java:178            : int r = is.read();
+  Downloader.java:179            : if (r == -1) {
+  Downloader.java:182            : ch = (char) r;
+  Downloader.java:183            : if (ch == '\r') {
+  Downloader.java:185            : } else if (ch != '\n') {
+  Downloader.java:186            : s.append(ch);
+      [2 insn w/o sources]
+  Downloader.java:186            : s.append(ch);
+  Downloader.java:188            : }
+  Downloader.java:177            : while(ch != '\n') {
+  Downloader.java:178            : int r = is.read();
+  env/java/io/InputStream.java:45 : if (pos < HEADER.length()) {
+      [4 insn w/o sources]
+  env/java/io/InputStream.java:45 : if (pos < HEADER.length()) {
+  env/java/io/InputStream.java:46 : return (int)HEADER.charAt(pos++);
+      [2 insn w/o sources]
+  env/java/io/InputStream.java:46 : return (int)HEADER.charAt(pos++);
+  Downloader.java:178            : int r = is.read();
+  Downloader.java:179            : if (r == -1) {
+  Downloader.java:182            : ch = (char) r;
+  Downloader.java:183            : if (ch == '\r') {
+  Downloader.java:185            : } else if (ch != '\n') {
+  Downloader.java:186            : s.append(ch);
+      [2 insn w/o sources]
+  Downloader.java:186            : s.append(ch);
+  Downloader.java:188            : }
+  Downloader.java:177            : while(ch != '\n') {
+  Downloader.java:178            : int r = is.read();
+  env/java/io/InputStream.java:45 : if (pos < HEADER.length()) {
+      [4 insn w/o sources]
+  env/java/io/InputStream.java:45 : if (pos < HEADER.length()) {
+  env/java/io/InputStream.java:46 : return (int)HEADER.charAt(pos++);
+      [2 insn w/o sources]
+  env/java/io/InputStream.java:46 : return (int)HEADER.charAt(pos++);
+  Downloader.java:178            : int r = is.read();
+  Downloader.java:179            : if (r == -1) {
+  Downloader.java:182            : ch = (char) r;
+  Downloader.java:183            : if (ch == '\r') {
+  Downloader.java:185            : } else if (ch != '\n') {
+  Downloader.java:186            : s.append(ch);
+      [2 insn w/o sources]
+  Downloader.java:186            : s.append(ch);
+  Downloader.java:188            : }
+  Downloader.java:177            : while(ch != '\n') {
+  Downloader.java:178            : int r = is.read();
+  env/java/io/InputStream.java:45 : if (pos < HEADER.length()) {
+      [4 insn w/o sources]
+  env/java/io/InputStream.java:45 : if (pos < HEADER.length()) {
+  env/java/io/InputStream.java:46 : return (int)HEADER.charAt(pos++);
+      [2 insn w/o sources]
+  env/java/io/InputStream.java:46 : return (int)HEADER.charAt(pos++);
+  Downloader.java:178            : int r = is.read();
+  Downloader.java:179            : if (r == -1) {
+  Downloader.java:182            : ch = (char) r;
+  Downloader.java:183            : if (ch == '\r') {
+  Downloader.java:185            : } else if (ch != '\n') {
+  Downloader.java:186            : s.append(ch);
+      [2 insn w/o sources]
+  Downloader.java:186            : s.append(ch);
+  Downloader.java:188            : }
+  Downloader.java:177            : while(ch != '\n') {
+  Downloader.java:178            : int r = is.read();
+  env/java/io/InputStream.java:45 : if (pos < HEADER.length()) {
+      [4 insn w/o sources]
+  env/java/io/InputStream.java:45 : if (pos < HEADER.length()) {
+  env/java/io/InputStream.java:46 : return (int)HEADER.charAt(pos++);
+      [2 insn w/o sources]
+  env/java/io/InputStream.java:46 : return (int)HEADER.charAt(pos++);
+  Downloader.java:178            : int r = is.read();
+  Downloader.java:179            : if (r == -1) {
+  Downloader.java:182            : ch = (char) r;
+  Downloader.java:183            : if (ch == '\r') {
+  Downloader.java:185            : } else if (ch != '\n') {
+  Downloader.java:186            : s.append(ch);
+      [2 insn w/o sources]
+  Downloader.java:186            : s.append(ch);
+  Downloader.java:188            : }
+  Downloader.java:177            : while(ch != '\n') {
+  Downloader.java:178            : int r = is.read();
+  env/java/io/InputStream.java:45 : if (pos < HEADER.length()) {
+      [4 insn w/o sources]
+  env/java/io/InputStream.java:45 : if (pos < HEADER.length()) {
+  env/java/io/InputStream.java:46 : return (int)HEADER.charAt(pos++);
+      [2 insn w/o sources]
+  env/java/io/InputStream.java:46 : return (int)HEADER.charAt(pos++);
+  Downloader.java:178            : int r = is.read();
+  Downloader.java:179            : if (r == -1) {
+  Downloader.java:182            : ch = (char) r;
+  Downloader.java:183            : if (ch == '\r') {
+  Downloader.java:185            : } else if (ch != '\n') {
+  Downloader.java:186            : s.append(ch);
+      [2 insn w/o sources]
+  Downloader.java:186            : s.append(ch);
+  Downloader.java:188            : }
+  Downloader.java:177            : while(ch != '\n') {
+  Downloader.java:178            : int r = is.read();
+  env/java/io/InputStream.java:45 : if (pos < HEADER.length()) {
+      [4 insn w/o sources]
+  env/java/io/InputStream.java:45 : if (pos < HEADER.length()) {
+  env/java/io/InputStream.java:46 : return (int)HEADER.charAt(pos++);
+      [2 insn w/o sources]
+  env/java/io/InputStream.java:46 : return (int)HEADER.charAt(pos++);
+  Downloader.java:178            : int r = is.read();
+  Downloader.java:179            : if (r == -1) {
+  Downloader.java:182            : ch = (char) r;
+  Downloader.java:183            : if (ch == '\r') {
+  Downloader.java:185            : } else if (ch != '\n') {
+  Downloader.java:186            : s.append(ch);
+      [2 insn w/o sources]
+  Downloader.java:186            : s.append(ch);
+  Downloader.java:188            : }
+  Downloader.java:177            : while(ch != '\n') {
+  Downloader.java:178            : int r = is.read();
+  env/java/io/InputStream.java:45 : if (pos < HEADER.length()) {
+      [4 insn w/o sources]
+  env/java/io/InputStream.java:45 : if (pos < HEADER.length()) {
+  env/java/io/InputStream.java:46 : return (int)HEADER.charAt(pos++);
+      [2 insn w/o sources]
+  env/java/io/InputStream.java:46 : return (int)HEADER.charAt(pos++);
+  Downloader.java:178            : int r = is.read();
+  Downloader.java:179            : if (r == -1) {
+  Downloader.java:182            : ch = (char) r;
+  Downloader.java:183            : if (ch == '\r') {
+  Downloader.java:185            : } else if (ch != '\n') {
+  Downloader.java:186            : s.append(ch);
+      [2 insn w/o sources]
+  Downloader.java:186            : s.append(ch);
+  Downloader.java:188            : }
+  Downloader.java:177            : while(ch != '\n') {
+  Downloader.java:178            : int r = is.read();
+  env/java/io/InputStream.java:45 : if (pos < HEADER.length()) {
+      [4 insn w/o sources]
+  env/java/io/InputStream.java:45 : if (pos < HEADER.length()) {
+  env/java/io/InputStream.java:46 : return (int)HEADER.charAt(pos++);
+      [2 insn w/o sources]
+  env/java/io/InputStream.java:46 : return (int)HEADER.charAt(pos++);
+  Downloader.java:178            : int r = is.read();
+  Downloader.java:179            : if (r == -1) {
+  Downloader.java:182            : ch = (char) r;
+  Downloader.java:183            : if (ch == '\r') {
+  Downloader.java:185            : } else if (ch != '\n') {
+  Downloader.java:188            : }
+  Downloader.java:177            : while(ch != '\n') {
+  Downloader.java:189            : return s.toString();
+      [2 insn w/o sources]
+  Downloader.java:189            : return s.toString();
+  Downloader.java:103            : line = readLine(is);
+  Downloader.java:106            : }
+  Downloader.java:107            : if (line == null || line.equals("")) {
+      [2 insn w/o sources]
+  Downloader.java:107            : if (line == null || line.equals("")) {
+  Downloader.java:110            : int r = parse(line);
+  Downloader.java:193            : if (line.startsWith("HTTP/1")) {
+      [2 insn w/o sources]
+  Downloader.java:193            : if (line.startsWith("HTTP/1")) {
+  Downloader.java:195            : } else if (line.startsWith("Content-Length:")) {
+      [2 insn w/o sources]
+  Downloader.java:195            : } else if (line.startsWith("Content-Length:")) {
+  Downloader.java:196            : String len = line.substring(line.indexOf(" ") + 1);
+      [2 insn w/o sources]
+  Downloader.java:196            : String len = line.substring(line.indexOf(" ") + 1);
+      [2 insn w/o sources]
+  Downloader.java:196            : String len = line.substring(line.indexOf(" ") + 1);
+  Downloader.java:197            : return Integer.parseInt(len);
+      [2 insn w/o sources]
+  Downloader.java:197            : return Integer.parseInt(len);
+  Downloader.java:110            : int r = parse(line);
+  Downloader.java:111            : if (r > 0) {
+  Downloader.java:112            : length = r;
+  Downloader.java:116            : }
+  Downloader.java:101            : String line = null;
+  Downloader.java:103            : line = readLine(is);
+  Downloader.java:174            : StringBuilder s = new StringBuilder();
+      [2 insn w/o sources]
+  Downloader.java:174            : StringBuilder s = new StringBuilder();
+  Downloader.java:175            : char ch = '\0';
+  Downloader.java:177            : while(ch != '\n') {
+  Downloader.java:178            : int r = is.read();
+  env/java/io/InputStream.java:45 : if (pos < HEADER.length()) {
+      [4 insn w/o sources]
+  env/java/io/InputStream.java:45 : if (pos < HEADER.length()) {
+  env/java/io/InputStream.java:46 : return (int)HEADER.charAt(pos++);
+      [2 insn w/o sources]
+  env/java/io/InputStream.java:46 : return (int)HEADER.charAt(pos++);
+  Downloader.java:178            : int r = is.read();
+  Downloader.java:179            : if (r == -1) {
+  Downloader.java:182            : ch = (char) r;
+  Downloader.java:183            : if (ch == '\r') {
+  Downloader.java:185            : } else if (ch != '\n') {
+  Downloader.java:186            : s.append(ch);
+      [2 insn w/o sources]
+  Downloader.java:186            : s.append(ch);
+  Downloader.java:188            : }
+  Downloader.java:177            : while(ch != '\n') {
+  Downloader.java:178            : int r = is.read();
+  env/java/io/InputStream.java:45 : if (pos < HEADER.length()) {
+      [4 insn w/o sources]
+  env/java/io/InputStream.java:45 : if (pos < HEADER.length()) {
+  env/java/io/InputStream.java:46 : return (int)HEADER.charAt(pos++);
+      [2 insn w/o sources]
+  env/java/io/InputStream.java:46 : return (int)HEADER.charAt(pos++);
+  Downloader.java:178            : int r = is.read();
+  Downloader.java:179            : if (r == -1) {
+  Downloader.java:182            : ch = (char) r;
+  Downloader.java:183            : if (ch == '\r') {
+  Downloader.java:185            : } else if (ch != '\n') {
+  Downloader.java:186            : s.append(ch);
+      [2 insn w/o sources]
+  Downloader.java:186            : s.append(ch);
+  Downloader.java:188            : }
+  Downloader.java:177            : while(ch != '\n') {
+  Downloader.java:178            : int r = is.read();
+  env/java/io/InputStream.java:45 : if (pos < HEADER.length()) {
+      [4 insn w/o sources]
+  env/java/io/InputStream.java:45 : if (pos < HEADER.length()) {
+  env/java/io/InputStream.java:46 : return (int)HEADER.charAt(pos++);
+      [2 insn w/o sources]
+  env/java/io/InputStream.java:46 : return (int)HEADER.charAt(pos++);
+  Downloader.java:178            : int r = is.read();
+  Downloader.java:179            : if (r == -1) {
+  Downloader.java:182            : ch = (char) r;
+  Downloader.java:183            : if (ch == '\r') {
+  Downloader.java:185            : } else if (ch != '\n') {
+  Downloader.java:186            : s.append(ch);
+      [2 insn w/o sources]
+  Downloader.java:186            : s.append(ch);
+  Downloader.java:188            : }
+  Downloader.java:177            : while(ch != '\n') {
+  Downloader.java:178            : int r = is.read();
+  env/java/io/InputStream.java:45 : if (pos < HEADER.length()) {
+      [4 insn w/o sources]
+  env/java/io/InputStream.java:45 : if (pos < HEADER.length()) {
+  env/java/io/InputStream.java:46 : return (int)HEADER.charAt(pos++);
+      [2 insn w/o sources]
+  env/java/io/InputStream.java:46 : return (int)HEADER.charAt(pos++);
+  Downloader.java:178            : int r = is.read();
+  Downloader.java:179            : if (r == -1) {
+  Downloader.java:182            : ch = (char) r;
+  Downloader.java:183            : if (ch == '\r') {
+  Downloader.java:185            : } else if (ch != '\n') {
+  Downloader.java:186            : s.append(ch);
+      [2 insn w/o sources]
+  Downloader.java:186            : s.append(ch);
+  Downloader.java:188            : }
+  Downloader.java:177            : while(ch != '\n') {
+  Downloader.java:178            : int r = is.read();
+  env/java/io/InputStream.java:45 : if (pos < HEADER.length()) {
+      [4 insn w/o sources]
+  env/java/io/InputStream.java:45 : if (pos < HEADER.length()) {
+  env/java/io/InputStream.java:46 : return (int)HEADER.charAt(pos++);
+      [2 insn w/o sources]
+  env/java/io/InputStream.java:46 : return (int)HEADER.charAt(pos++);
+  Downloader.java:178            : int r = is.read();
+  Downloader.java:179            : if (r == -1) {
+  Downloader.java:182            : ch = (char) r;
+  Downloader.java:183            : if (ch == '\r') {
+  Downloader.java:185            : } else if (ch != '\n') {
+  Downloader.java:186            : s.append(ch);
+      [2 insn w/o sources]
+  Downloader.java:186            : s.append(ch);
+  Downloader.java:188            : }
+  Downloader.java:177            : while(ch != '\n') {
+  Downloader.java:178            : int r = is.read();
+  env/java/io/InputStream.java:45 : if (pos < HEADER.length()) {
+      [4 insn w/o sources]
+  env/java/io/InputStream.java:45 : if (pos < HEADER.length()) {
+  env/java/io/InputStream.java:46 : return (int)HEADER.charAt(pos++);
+      [2 insn w/o sources]
+  env/java/io/InputStream.java:46 : return (int)HEADER.charAt(pos++);
+  Downloader.java:178            : int r = is.read();
+  Downloader.java:179            : if (r == -1) {
+  Downloader.java:182            : ch = (char) r;
+  Downloader.java:183            : if (ch == '\r') {
+  Downloader.java:185            : } else if (ch != '\n') {
+  Downloader.java:186            : s.append(ch);
+      [2 insn w/o sources]
+  Downloader.java:186            : s.append(ch);
+  Downloader.java:188            : }
+  Downloader.java:177            : while(ch != '\n') {
+  Downloader.java:178            : int r = is.read();
+  env/java/io/InputStream.java:45 : if (pos < HEADER.length()) {
+      [4 insn w/o sources]
+  env/java/io/InputStream.java:45 : if (pos < HEADER.length()) {
+  env/java/io/InputStream.java:46 : return (int)HEADER.charAt(pos++);
+      [2 insn w/o sources]
+  env/java/io/InputStream.java:46 : return (int)HEADER.charAt(pos++);
+  Downloader.java:178            : int r = is.read();
+  Downloader.java:179            : if (r == -1) {
+  Downloader.java:182            : ch = (char) r;
+  Downloader.java:183            : if (ch == '\r') {
+  Downloader.java:185            : } else if (ch != '\n') {
+  Downloader.java:186            : s.append(ch);
+      [2 insn w/o sources]
+  Downloader.java:186            : s.append(ch);
+  Downloader.java:188            : }
+  Downloader.java:177            : while(ch != '\n') {
+  Downloader.java:178            : int r = is.read();
+  env/java/io/InputStream.java:45 : if (pos < HEADER.length()) {
+      [4 insn w/o sources]
+  env/java/io/InputStream.java:45 : if (pos < HEADER.length()) {
+  env/java/io/InputStream.java:46 : return (int)HEADER.charAt(pos++);
+      [2 insn w/o sources]
+  env/java/io/InputStream.java:46 : return (int)HEADER.charAt(pos++);
+  Downloader.java:178            : int r = is.read();
+  Downloader.java:179            : if (r == -1) {
+  Downloader.java:182            : ch = (char) r;
+  Downloader.java:183            : if (ch == '\r') {
+  Downloader.java:185            : } else if (ch != '\n') {
+  Downloader.java:186            : s.append(ch);
+      [2 insn w/o sources]
+  Downloader.java:186            : s.append(ch);
+  Downloader.java:188            : }
+  Downloader.java:177            : while(ch != '\n') {
+  Downloader.java:178            : int r = is.read();
+  env/java/io/InputStream.java:45 : if (pos < HEADER.length()) {
+      [4 insn w/o sources]
+  env/java/io/InputStream.java:45 : if (pos < HEADER.length()) {
+  env/java/io/InputStream.java:46 : return (int)HEADER.charAt(pos++);
+      [2 insn w/o sources]
+  env/java/io/InputStream.java:46 : return (int)HEADER.charAt(pos++);
+  Downloader.java:178            : int r = is.read();
+  Downloader.java:179            : if (r == -1) {
+  Downloader.java:182            : ch = (char) r;
+  Downloader.java:183            : if (ch == '\r') {
+  Downloader.java:185            : } else if (ch != '\n') {
+  Downloader.java:186            : s.append(ch);
+      [2 insn w/o sources]
+  Downloader.java:186            : s.append(ch);
+  Downloader.java:188            : }
+  Downloader.java:177            : while(ch != '\n') {
+  Downloader.java:178            : int r = is.read();
+  env/java/io/InputStream.java:45 : if (pos < HEADER.length()) {
+      [4 insn w/o sources]
+  env/java/io/InputStream.java:45 : if (pos < HEADER.length()) {
+  env/java/io/InputStream.java:46 : return (int)HEADER.charAt(pos++);
+      [2 insn w/o sources]
+  env/java/io/InputStream.java:46 : return (int)HEADER.charAt(pos++);
+  Downloader.java:178            : int r = is.read();
+  Downloader.java:179            : if (r == -1) {
+  Downloader.java:182            : ch = (char) r;
+  Downloader.java:183            : if (ch == '\r') {
+  Downloader.java:185            : } else if (ch != '\n') {
+  Downloader.java:186            : s.append(ch);
+      [2 insn w/o sources]
+  Downloader.java:186            : s.append(ch);
+  Downloader.java:188            : }
+  Downloader.java:177            : while(ch != '\n') {
+  Downloader.java:178            : int r = is.read();
+  env/java/io/InputStream.java:45 : if (pos < HEADER.length()) {
+      [4 insn w/o sources]
+  env/java/io/InputStream.java:45 : if (pos < HEADER.length()) {
+  env/java/io/InputStream.java:46 : return (int)HEADER.charAt(pos++);
+      [2 insn w/o sources]
+  env/java/io/InputStream.java:46 : return (int)HEADER.charAt(pos++);
+  Downloader.java:178            : int r = is.read();
+  Downloader.java:179            : if (r == -1) {
+  Downloader.java:182            : ch = (char) r;
+  Downloader.java:183            : if (ch == '\r') {
+  Downloader.java:185            : } else if (ch != '\n') {
+  Downloader.java:186            : s.append(ch);
+      [2 insn w/o sources]
+  Downloader.java:186            : s.append(ch);
+  Downloader.java:188            : }
+  Downloader.java:177            : while(ch != '\n') {
+  Downloader.java:178            : int r = is.read();
+  env/java/io/InputStream.java:45 : if (pos < HEADER.length()) {
+      [4 insn w/o sources]
+  env/java/io/InputStream.java:45 : if (pos < HEADER.length()) {
+  env/java/io/InputStream.java:46 : return (int)HEADER.charAt(pos++);
+      [2 insn w/o sources]
+  env/java/io/InputStream.java:46 : return (int)HEADER.charAt(pos++);
+  Downloader.java:178            : int r = is.read();
+  Downloader.java:179            : if (r == -1) {
+  Downloader.java:182            : ch = (char) r;
+  Downloader.java:183            : if (ch == '\r') {
+  Downloader.java:185            : } else if (ch != '\n') {
+  Downloader.java:186            : s.append(ch);
+      [2 insn w/o sources]
+  Downloader.java:186            : s.append(ch);
+  Downloader.java:188            : }
+  Downloader.java:177            : while(ch != '\n') {
+  Downloader.java:178            : int r = is.read();
+  env/java/io/InputStream.java:45 : if (pos < HEADER.length()) {
+      [4 insn w/o sources]
+  env/java/io/InputStream.java:45 : if (pos < HEADER.length()) {
+  env/java/io/InputStream.java:46 : return (int)HEADER.charAt(pos++);
+      [2 insn w/o sources]
+  env/java/io/InputStream.java:46 : return (int)HEADER.charAt(pos++);
+  Downloader.java:178            : int r = is.read();
+  Downloader.java:179            : if (r == -1) {
+  Downloader.java:182            : ch = (char) r;
+  Downloader.java:183            : if (ch == '\r') {
+  Downloader.java:185            : } else if (ch != '\n') {
+  Downloader.java:186            : s.append(ch);
+      [2 insn w/o sources]
+  Downloader.java:186            : s.append(ch);
+  Downloader.java:188            : }
+  Downloader.java:177            : while(ch != '\n') {
+  Downloader.java:178            : int r = is.read();
+  env/java/io/InputStream.java:45 : if (pos < HEADER.length()) {
+      [4 insn w/o sources]
+  env/java/io/InputStream.java:45 : if (pos < HEADER.length()) {
+  env/java/io/InputStream.java:46 : return (int)HEADER.charAt(pos++);
+      [2 insn w/o sources]
+  env/java/io/InputStream.java:46 : return (int)HEADER.charAt(pos++);
+  Downloader.java:178            : int r = is.read();
+  Downloader.java:179            : if (r == -1) {
+  Downloader.java:182            : ch = (char) r;
+  Downloader.java:183            : if (ch == '\r') {
+  Downloader.java:185            : } else if (ch != '\n') {
+  Downloader.java:186            : s.append(ch);
+      [2 insn w/o sources]
+  Downloader.java:186            : s.append(ch);
+  Downloader.java:188            : }
+  Downloader.java:177            : while(ch != '\n') {
+  Downloader.java:178            : int r = is.read();
+  env/java/io/InputStream.java:45 : if (pos < HEADER.length()) {
+      [4 insn w/o sources]
+  env/java/io/InputStream.java:45 : if (pos < HEADER.length()) {
+  env/java/io/InputStream.java:46 : return (int)HEADER.charAt(pos++);
+      [2 insn w/o sources]
+  env/java/io/InputStream.java:46 : return (int)HEADER.charAt(pos++);
+  Downloader.java:178            : int r = is.read();
+  Downloader.java:179            : if (r == -1) {
+  Downloader.java:182            : ch = (char) r;
+  Downloader.java:183            : if (ch == '\r') {
+  Downloader.java:185            : } else if (ch != '\n') {
+  Downloader.java:186            : s.append(ch);
+      [2 insn w/o sources]
+  Downloader.java:186            : s.append(ch);
+  Downloader.java:188            : }
+  Downloader.java:177            : while(ch != '\n') {
+  Downloader.java:178            : int r = is.read();
+  env/java/io/InputStream.java:45 : if (pos < HEADER.length()) {
+      [4 insn w/o sources]
+  env/java/io/InputStream.java:45 : if (pos < HEADER.length()) {
+  env/java/io/InputStream.java:46 : return (int)HEADER.charAt(pos++);
+      [2 insn w/o sources]
+  env/java/io/InputStream.java:46 : return (int)HEADER.charAt(pos++);
+  Downloader.java:178            : int r = is.read();
+  Downloader.java:179            : if (r == -1) {
+  Downloader.java:182            : ch = (char) r;
+  Downloader.java:183            : if (ch == '\r') {
+  Downloader.java:185            : } else if (ch != '\n') {
+  Downloader.java:186            : s.append(ch);
+      [2 insn w/o sources]
+  Downloader.java:186            : s.append(ch);
+  Downloader.java:188            : }
+  Downloader.java:177            : while(ch != '\n') {
+  Downloader.java:178            : int r = is.read();
+  env/java/io/InputStream.java:45 : if (pos < HEADER.length()) {
+      [4 insn w/o sources]
+  env/java/io/InputStream.java:45 : if (pos < HEADER.length()) {
+  env/java/io/InputStream.java:46 : return (int)HEADER.charAt(pos++);
+      [2 insn w/o sources]
+  env/java/io/InputStream.java:46 : return (int)HEADER.charAt(pos++);
+  Downloader.java:178            : int r = is.read();
+  Downloader.java:179            : if (r == -1) {
+  Downloader.java:182            : ch = (char) r;
+  Downloader.java:183            : if (ch == '\r') {
+  Downloader.java:185            : } else if (ch != '\n') {
+  Downloader.java:186            : s.append(ch);
+      [2 insn w/o sources]
+  Downloader.java:186            : s.append(ch);
+  Downloader.java:188            : }
+  Downloader.java:177            : while(ch != '\n') {
+  Downloader.java:178            : int r = is.read();
+  env/java/io/InputStream.java:45 : if (pos < HEADER.length()) {
+      [4 insn w/o sources]
+  env/java/io/InputStream.java:45 : if (pos < HEADER.length()) {
+  env/java/io/InputStream.java:46 : return (int)HEADER.charAt(pos++);
+      [2 insn w/o sources]
+  env/java/io/InputStream.java:46 : return (int)HEADER.charAt(pos++);
+  Downloader.java:178            : int r = is.read();
+  Downloader.java:179            : if (r == -1) {
+  Downloader.java:182            : ch = (char) r;
+  Downloader.java:183            : if (ch == '\r') {
+  Downloader.java:185            : } else if (ch != '\n') {
+  Downloader.java:186            : s.append(ch);
+      [2 insn w/o sources]
+  Downloader.java:186            : s.append(ch);
+  Downloader.java:188            : }
+  Downloader.java:177            : while(ch != '\n') {
+  Downloader.java:178            : int r = is.read();
+  env/java/io/InputStream.java:45 : if (pos < HEADER.length()) {
+      [4 insn w/o sources]
+  env/java/io/InputStream.java:45 : if (pos < HEADER.length()) {
+  env/java/io/InputStream.java:46 : return (int)HEADER.charAt(pos++);
+      [2 insn w/o sources]
+  env/java/io/InputStream.java:46 : return (int)HEADER.charAt(pos++);
+  Downloader.java:178            : int r = is.read();
+  Downloader.java:179            : if (r == -1) {
+  Downloader.java:182            : ch = (char) r;
+  Downloader.java:183            : if (ch == '\r') {
+  Downloader.java:185            : } else if (ch != '\n') {
+  Downloader.java:186            : s.append(ch);
+      [2 insn w/o sources]
+  Downloader.java:186            : s.append(ch);
+  Downloader.java:188            : }
+  Downloader.java:177            : while(ch != '\n') {
+  Downloader.java:178            : int r = is.read();
+  env/java/io/InputStream.java:45 : if (pos < HEADER.length()) {
+      [4 insn w/o sources]
+  env/java/io/InputStream.java:45 : if (pos < HEADER.length()) {
+  env/java/io/InputStream.java:46 : return (int)HEADER.charAt(pos++);
+      [2 insn w/o sources]
+  env/java/io/InputStream.java:46 : return (int)HEADER.charAt(pos++);
+  Downloader.java:178            : int r = is.read();
+  Downloader.java:179            : if (r == -1) {
+  Downloader.java:182            : ch = (char) r;
+  Downloader.java:183            : if (ch == '\r') {
+  Downloader.java:185            : } else if (ch != '\n') {
+  Downloader.java:186            : s.append(ch);
+      [2 insn w/o sources]
+  Downloader.java:186            : s.append(ch);
+  Downloader.java:188            : }
+  Downloader.java:177            : while(ch != '\n') {
+  Downloader.java:178            : int r = is.read();
+  env/java/io/InputStream.java:45 : if (pos < HEADER.length()) {
+      [4 insn w/o sources]
+  env/java/io/InputStream.java:45 : if (pos < HEADER.length()) {
+  env/java/io/InputStream.java:46 : return (int)HEADER.charAt(pos++);
+      [2 insn w/o sources]
+  env/java/io/InputStream.java:46 : return (int)HEADER.charAt(pos++);
+  Downloader.java:178            : int r = is.read();
+  Downloader.java:179            : if (r == -1) {
+  Downloader.java:182            : ch = (char) r;
+  Downloader.java:183            : if (ch == '\r') {
+  Downloader.java:185            : } else if (ch != '\n') {
+  Downloader.java:188            : }
+  Downloader.java:177            : while(ch != '\n') {
+  Downloader.java:189            : return s.toString();
+      [2 insn w/o sources]
+  Downloader.java:189            : return s.toString();
+  Downloader.java:103            : line = readLine(is);
+  Downloader.java:106            : }
+  Downloader.java:107            : if (line == null || line.equals("")) {
+      [2 insn w/o sources]
+  Downloader.java:107            : if (line == null || line.equals("")) {
+  Downloader.java:110            : int r = parse(line);
+  Downloader.java:193            : if (line.startsWith("HTTP/1")) {
+      [2 insn w/o sources]
+  Downloader.java:193            : if (line.startsWith("HTTP/1")) {
+  Downloader.java:195            : } else if (line.startsWith("Content-Length:")) {
+      [2 insn w/o sources]
+  Downloader.java:195            : } else if (line.startsWith("Content-Length:")) {
+  Downloader.java:199            : return 0;
+  Downloader.java:110            : int r = parse(line);
+  Downloader.java:111            : if (r > 0) {
+  Downloader.java:113            : } else if (r == STATE_OK) {
+  Downloader.java:116            : }
+  Downloader.java:101            : String line = null;
+  Downloader.java:103            : line = readLine(is);
+  Downloader.java:174            : StringBuilder s = new StringBuilder();
+      [2 insn w/o sources]
+  Downloader.java:174            : StringBuilder s = new StringBuilder();
+  Downloader.java:175            : char ch = '\0';
+  Downloader.java:177            : while(ch != '\n') {
+  Downloader.java:178            : int r = is.read();
+  env/java/io/InputStream.java:45 : if (pos < HEADER.length()) {
+      [4 insn w/o sources]
+  env/java/io/InputStream.java:45 : if (pos < HEADER.length()) {
+  env/java/io/InputStream.java:48 : return -1;
+  Downloader.java:178            : int r = is.read();
+  Downloader.java:179            : if (r == -1) {
+  Downloader.java:180            : return s.toString();
+      [2 insn w/o sources]
+  Downloader.java:180            : return s.toString();
+  Downloader.java:103            : line = readLine(is);
+  Downloader.java:106            : }
+  Downloader.java:107            : if (line == null || line.equals("")) {
+      [2 insn w/o sources]
+  Downloader.java:107            : if (line == null || line.equals("")) {
+  Downloader.java:108            : break;
+  Downloader.java:117            : return length;
+  Downloader.java:72             : int length = connect();
+  Downloader.java:73             : launchDL(length);
+  Downloader.java:132            : synchronized(output) {
+  Downloader.java:133            : if (downloaders > length) {
+  Downloader.java:136            : }
+  Downloader.java:137            : int end = length;
+  Downloader.java:138            : synchronized(output) {
+  Downloader.java:139            : int chunkSize = length / (downloaders + 1);
+  Downloader.java:140            : int start = 0;
+  Downloader.java:141            : for (int i = 0; i < downloaders; i++) {
+  Downloader.java:142            : start = end - chunkSize;
+  Downloader.java:143            : new Downloader(start, end).start();
+  Downloader.java:66             : public Downloader(int start, int end) {
+      [145 insn w/o sources]
+  Downloader.java:21             : int port = 8080;
+  Downloader.java:22             : boolean ok = false;
+  Downloader.java:23             : int start = 0;
+  Downloader.java:24             : int end = Integer.MAX_VALUE;
+  Downloader.java:25             : Socket s = null;
+  Downloader.java:26             : PrintWriter pw = null;
+  Downloader.java:27             : InputStream is = null;
+  Downloader.java:67             : this.start = start;
+  Downloader.java:68             : this.end = end;
+  Downloader.java:69             : }
+  Downloader.java:143            : new Downloader(start, end).start();
+      [1 insn w/o sources]
+------------------------------------------------------ transition #1 thread: 0
+gov.nasa.jpf.vm.choice.ThreadChoiceFromSet {id:"START" ,1/2,isCascaded:false}
+      [2 insn w/o sources]
+  Downloader.java:144            : end = end - chunkSize;
+  Downloader.java:141            : for (int i = 0; i < downloaders; i++) {
+  Downloader.java:142            : start = end - chunkSize;
+  Downloader.java:143            : new Downloader(start, end).start();
+  Downloader.java:66             : public Downloader(int start, int end) {
+      [27 insn w/o sources]
+------------------------------------------------------ transition #2 thread: 0
+gov.nasa.jpf.vm.choice.ThreadChoiceFromSet {id:"LOCK" ,1/2,isCascaded:false}
+      [119 insn w/o sources]
+  Downloader.java:21             : int port = 8080;
+  Downloader.java:22             : boolean ok = false;
+  Downloader.java:23             : int start = 0;
+  Downloader.java:24             : int end = Integer.MAX_VALUE;
+  Downloader.java:25             : Socket s = null;
+  Downloader.java:26             : PrintWriter pw = null;
+  Downloader.java:27             : InputStream is = null;
+  Downloader.java:67             : this.start = start;
+  Downloader.java:68             : this.end = end;
+  Downloader.java:69             : }
+  Downloader.java:143            : new Downloader(start, end).start();
+      [1 insn w/o sources]
+------------------------------------------------------ transition #3 thread: 0
+gov.nasa.jpf.vm.choice.ThreadChoiceFromSet {id:"START" ,1/3,isCascaded:false}
+      [2 insn w/o sources]
+  Downloader.java:144            : end = end - chunkSize;
+  Downloader.java:141            : for (int i = 0; i < downloaders; i++) {
+  Downloader.java:146            : firstWorkerStart = start;
+  Downloader.java:147            : }
+  Downloader.java:148            : }
+  Downloader.java:74             : getData(length);
+  Downloader.java:121            : if (length != 0 && end > length) { // known length, adjust "end"
+  Downloader.java:122            : end = length;
+  Downloader.java:124            : getData(is, start, end, true);
+  Downloader.java:203            : byte[] buffer = new byte[BUF_SIZE];
+  Downloader.java:204            : int pos = start;
+  Downloader.java:205            : int toRead = buffer.length;
+  Downloader.java:206            : int r = 0;
+  Downloader.java:208            : while (pos < end && r != -1) {
+  Downloader.java:209            : if (pos + toRead > end) {
+  Downloader.java:212            : r = is.read(buffer, 0, toRead);
+  env/java/io/InputStream.java:29 : if (gov.nasa.jpf.vm.Verify.getBoolean()) {
+      [1 insn w/o sources]
+------------------------------------------------------ transition #4 thread: 0
+gov.nasa.jpf.vm.BooleanChoiceGenerator[[id="verifyGetBoolean",isCascaded:false,{>false,true}]
+      [2 insn w/o sources]
+  env/java/io/InputStream.java:29 : if (gov.nasa.jpf.vm.Verify.getBoolean()) {
+  env/java/io/InputStream.java:32 : if (start >= CONTENT_LENGTH) {
+  env/java/io/InputStream.java:36 : for (int i = 0; i < len; i++)
+  env/java/io/InputStream.java:37 : b[i] = (byte) ('a' + (start + i));
+  env/java/io/InputStream.java:36 : for (int i = 0; i < len; i++)
+  env/java/io/InputStream.java:38 : return 0;
+  Downloader.java:212            : r = is.read(buffer, 0, toRead);
+  Downloader.java:214            : if (r != -1) {
+  Downloader.java:215            : synchronized (output) {
+------------------------------------------------------ transition #5 thread: 0
+gov.nasa.jpf.vm.choice.ThreadChoiceFromSet {id:"LOCK" ,1/3,isCascaded:false}
+  Downloader.java:215            : synchronized (output) {
+  Downloader.java:216            : if (main_finished ||
+  Downloader.java:220            : writeBuf(pos, r, buffer);
+  Downloader.java:241            : synchronized (output) {
+  Downloader.java:242            : output.seek(pos);
+  env/java/io/RandomAccessFile.java:51 : if (isClosed) throw new IOException ("File is closed");
+  env/java/io/RandomAccessFile.java:52 : if (pos < 0) throw new IOException("Position < 0");
+  env/java/io/RandomAccessFile.java:53 : this.pos = (int)pos;
+  env/java/io/RandomAccessFile.java:54 : }
+  Downloader.java:243            : output.write(buffer, 0, len);
+  env/java/io/RandomAccessFile.java:57 : if (!canWrite) throw new IOException("Write called on read-only file");
+  env/java/io/RandomAccessFile.java:58 : if (isClosed) throw new IOException ("File is closed");
+  env/java/io/RandomAccessFile.java:59 : while (off < len && pos < MAX_SIZE) {
+  env/java/io/RandomAccessFile.java:64 : if (pos == MAX_SIZE && off < len) {
+  env/java/io/RandomAccessFile.java:67 : }
+  Downloader.java:244            : }
+  Downloader.java:247            : }
+  Downloader.java:248            : }
+  Downloader.java:221            : }
+  Downloader.java:222            : pos += r;
+  Downloader.java:223            : synchronized (output) {
+------------------------------------------------------ transition #6 thread: 0
+gov.nasa.jpf.vm.choice.ThreadChoiceFromSet {id:"LOCK" ,1/3,isCascaded:false}
+  Downloader.java:223            : synchronized (output) {
+  Downloader.java:224            : if (isMain && pos >= firstWorkerStart) {
+  Downloader.java:227            : }
+  Downloader.java:208            : while (pos < end && r != -1) {
+  Downloader.java:209            : if (pos + toRead > end) {
+  Downloader.java:212            : r = is.read(buffer, 0, toRead);
+  env/java/io/InputStream.java:29 : if (gov.nasa.jpf.vm.Verify.getBoolean()) {
+      [1 insn w/o sources]
+------------------------------------------------------ transition #7 thread: 0
+gov.nasa.jpf.vm.BooleanChoiceGenerator[[id="verifyGetBoolean",isCascaded:false,{false,>true}]
+      [2 insn w/o sources]
+  env/java/io/InputStream.java:29 : if (gov.nasa.jpf.vm.Verify.getBoolean()) {
+  env/java/io/InputStream.java:30 : assert(false);
+      [21 insn w/o sources]
+
+====================================================== snapshot #1
+thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
+  call stack:
+	at env.java.io.InputStream.read(InputStream.java:30)
+	at Downloader.getData(Downloader.java:212)
+	at Downloader.getData(Downloader.java:124)
+	at Downloader.download(Downloader.java:74)
+	at jdl.main(jdl.java:5)
+
+thread Downloader:{id:2,name:Thread-2,status:RUNNING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
+  call stack:
+
+thread Downloader:{id:3,name:Thread-3,status:RUNNING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
+  call stack:
+
+
+====================================================== results
+error #1: gov.nasa.jpf.vm.NoUncaughtExceptionsProperty "java.lang.AssertionError  at env.java.io.InputStre..."
+
+====================================================== statistics
+elapsed time:       00:00:00
+states:             new=8,visited=1,backtracked=1,end=0
+search:             maxDepth=8,constraints=0
+choice generators:  thread=6 (signal=0,lock=4,sharedRef=0,threadApi=2,reschedule=0), data=2
+heap:               new=698,released=136,maxLive=546,gcCycles=8
+instructions:       15614
+max memory:         123MB
+loaded code:        classes=91,methods=1892
+
+====================================================== search finished: 5/16/18 12:22 PM
